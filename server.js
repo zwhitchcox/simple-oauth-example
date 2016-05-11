@@ -7,10 +7,6 @@ const fetch = require('node-fetch')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-//fetch('https://github.com/login/oauth/authorize?client_id=' +
-  //conf.id+ '&redirect_uri=http://localhost:3000/github/callback'+
- //'&scope=user:email&state=1234')
-
 app.get('/github/callback', (req, res) => {
   fetch('https://github.com/login/oauth/access_token',
     {
