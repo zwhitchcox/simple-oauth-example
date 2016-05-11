@@ -1,0 +1,5 @@
+<div id="welcome"></div>
+<script>
+document.getElementById('welcome').innerHTML =
+'<h1>Welcome, ' + decodeURIComponent(location.pathname.substr(location.pathname.lastIndexOf('/')+1)) + '</h1>'
+</script>
